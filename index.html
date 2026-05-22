@@ -60,6 +60,7 @@
     [aria-label="Subscribe example"]{padding:4.5rem 0;background:linear-gradient(135deg,#062d16,#0a5a2b);}
     [aria-label="Subscribe example"] article{border:0;border-radius:28px;background:#fff;box-shadow:0 28px 70px rgba(0,0,0,.22);}
     [aria-label="Subscribe example"] h2{font-size:clamp(1.8rem,3.5vw,2.7rem);}
+    [aria-label="Subscribe example"] hgroup{text-align:center;} /* added */
     input{background:#fbfdfb!important;border-color:#dde7df!important;}
     button{background:var(--kg-green);border-color:var(--kg-green);}
     footer.container{padding:2.4rem 0;text-align:center;color:var(--muted);}
@@ -70,7 +71,7 @@
   grid-template-columns: 1fr !important;
   gap: 1rem;
   max-width: 720px;
-  margin-top: 1.5rem;
+  margin-top: 1.5rem auto 0 auto; /* centers horizontally */
 }
 
 .contact-form input,
@@ -86,7 +87,7 @@
 }
 
 .contact-form button {
-  margin-top: .25rem;
+  width: 100%; /* was margin-top .25rem; */
 }
   </style>
 </head>
