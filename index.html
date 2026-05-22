@@ -58,7 +58,7 @@
     .feature-band img{border-radius:22px;width:100%;height:330px;object-fit:cover;filter:saturate(.82);}
     .feature-band ul{padding-left:1.1rem;color:var(--muted);}
     [aria-label="Subscribe example"]{padding:4.5rem 0;background:linear-gradient(135deg,#062d16,#0a5a2b);}
-    [aria-label="Subscribe example"] article{border:0;border-radius:28px;background:#fff;box-shadow:0 28px 70px rgba(0,0,0,.22);}
+    [aria-label="Subscribe example"] article{display: flex; flex-direction: column; align-items: center;}
     [aria-label="Subscribe example"] h2{font-size:clamp(1.8rem,3.5vw,2.7rem);}
     [aria-label="Subscribe example"] hgroup{text-align:center;} /* added */
     input{background:#fbfdfb!important;border-color:#dde7df!important;}
@@ -67,10 +67,13 @@
     footer a{color:var(--kg-deep);}
     @media(max-width:900px){.hero,.feature-band{grid-template-columns:1fr}.visual-card img{height:380px}.stats{grid-template-columns:1fr}nav ul:last-child{display:none}.brand-logo{max-width:320px}main.container{padding-top:2.5rem}}
     .contact-form {
-  display: grid;
-  grid-template-columns: 1fr !important;
+  display: flex !important;
+  flex-direction: column !important;
+  /* grid-template-columns: 1fr !important; */
   gap: 1rem;
-  max-width: 720px;
+  width: min(720px, 100%);
+  margin: 2rem auto 0 auto !important;
+  /* max-width: 720px;
   margin-top: 1.5rem auto 0 auto; /* centers horizontally */
 }
 
@@ -78,7 +81,9 @@
 .contact-form select,
 .contact-form textarea,
 .contact-form button {
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
