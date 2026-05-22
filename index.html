@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -32,7 +31,7 @@
     }
 
     nav.container-fluid{
-      padding:.45rem 4vw !important;
+      padding:.15rem 4vw !important;
       border-bottom:1px solid var(--line);
       background:rgba(255,255,255,.94);
       backdrop-filter:blur(14px);
@@ -42,8 +41,10 @@
       align-items:center;
     }
 
-    nav.container-fluid ul{
-      margin-bottom:0;
+    nav.container-fluid ul,
+    nav.container-fluid li{
+      margin:0 !important;
+      padding:0 !important;
     }
 
     nav strong{
@@ -70,43 +71,65 @@
     }
 
     .nav-logo{
-      width:110px;
+      width:135px;
       height:auto;
       display:block;
       flex-shrink:0;
+      margin:0 !important;
+      padding:0 !important;
     }
 
     .nav-brand{
       display:flex;
-      align-items:center;
-      gap:.9rem;
-      line-height:1;
-      flex-wrap:wrap;
+      flex-direction:column;
+      justify-content:center;
+      gap:.35rem;
+      line-height:1.1;
     }
 
     .nav-brand strong{
-      font-size:1rem;
+      font-size:1.15rem;
       white-space:nowrap;
+      margin:0;
     }
 
-    .nav-brand span{
-      font-size:.9rem;
+    .nav-contact-row{
+      display:flex;
+      align-items:center;
+      gap:.7rem;
       color:var(--muted);
+      font-size:.9rem;
+      line-height:1;
+    }
+
+    .nav-contact-item{
+      display:flex;
+      align-items:center;
+      gap:.35rem;
       white-space:nowrap;
     }
 
-    .nav-brand span a{
+    .nav-contact-item a{
       color:var(--muted);
       text-decoration:none;
     }
 
-    .nav-brand span a:hover{
+    .nav-contact-item a:hover{
       color:var(--kg-green);
     }
 
-    .nav-brand span:not(:last-child)::after{
-      content:"|";
-      margin-left:.8rem;
+    .nav-contact-icon{
+      width:15px;
+      height:15px;
+      stroke:var(--kg-green);
+      stroke-width:2;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      flex-shrink:0;
+    }
+
+    .nav-divider{
       color:#b7c0ba;
     }
 
@@ -121,12 +144,11 @@
         url("camden-hero-banner.png");
       background-size:cover;
       background-position:center;
-      border-bottom:1px solid var(--line);
       margin-bottom:2rem;
     }
 
     main.container{
-      padding-top:2.5rem;
+      padding-top:.25rem;
       padding-bottom:4.5rem;
     }
 
@@ -400,25 +422,33 @@
 
     @media(max-width:900px){
       .nav-logo{
-        width:72px;
+        width:90px;
       }
 
-      .nav-brand{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:.25rem;
+      .nav-logo-wrap{
+        gap:.85rem;
       }
 
-      .nav-brand span:not(:last-child)::after{
+      .nav-brand strong{
+        font-size:1rem;
+      }
+
+      .nav-contact-row{
+        flex-wrap:wrap;
+        gap:.4rem .65rem;
+        font-size:.86rem;
+      }
+
+      .nav-divider{
         display:none;
       }
 
-      nav.container-fluid > ul{
-        padding-left:0;
+      nav.container-fluid{
+        padding:.35rem 1rem !important;
       }
 
       nav.container-fluid > ul:last-child li{
-        margin:0;
+        margin:0 !important;
       }
 
       nav.container-fluid > ul:last-child a{
@@ -464,13 +494,26 @@
           <div class="nav-brand">
             <strong>KGS Accountants PA Inc</strong>
 
-            <span>
-              ☎ <a href="tel:8708366528">(870) 836-6528</a>
-            </span>
+            <div class="nav-contact-row">
+              <span class="nav-contact-item">
+                <svg class="nav-contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 11.19 18.85a19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18A2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.81.32 1.6.59 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.11a2 2 0 0 1 2.11-.45c.76.27 1.55.47 2.36.59A2 2 0 0 1 22 16.92z"/>
+                </svg>
 
-            <span>
-              ✉ <a href="mailto:home@kgsimpson.com">home@kgsimpson.com</a>
-            </span>
+                <a href="tel:8708366528">(870) 836-6528</a>
+              </span>
+
+              <span class="nav-divider">|</span>
+
+              <span class="nav-contact-item">
+                <svg class="nav-contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+                  <path d="m22 6-10 7L2 6"/>
+                </svg>
+
+                <a href="mailto:home@kgsimpson.com">home@kgsimpson.com</a>
+              </span>
+            </div>
           </div>
         </div>
       </li>
@@ -479,6 +522,7 @@
     <ul>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
+
       <li>
         <a
           href="https://app.financial-cents.com/client-portal"
@@ -489,6 +533,7 @@
           Client Portal Login
         </a>
       </li>
+
       <li><a href="#contact" role="button">Request Consultation</a></li>
     </ul>
   </nav>
