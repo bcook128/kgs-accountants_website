@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,13 +32,18 @@
     }
 
     nav.container-fluid{
-      padding:1rem 4vw;
+      padding:.45rem 4vw !important;
       border-bottom:1px solid var(--line);
-      background:rgba(255,255,255,.86);
+      background:rgba(255,255,255,.94);
       backdrop-filter:blur(14px);
       position:sticky;
       top:0;
       z-index:10;
+      align-items:center;
+    }
+
+    nav.container-fluid ul{
+      margin-bottom:0;
     }
 
     nav strong{
@@ -60,30 +66,33 @@
     .nav-logo-wrap{
       display:flex;
       align-items:center;
-      gap:.85rem;
+      gap:1rem;
     }
 
     .nav-logo{
-      width:366px;
+      width:110px;
       height:auto;
-      flex-shrink:0;
       display:block;
+      flex-shrink:0;
     }
 
     .nav-brand{
       display:flex;
-      flex-direction:column;
-      line-height:1.25;
+      align-items:center;
+      gap:.9rem;
+      line-height:1;
+      flex-wrap:wrap;
     }
 
     .nav-brand strong{
-      margin-bottom:.15rem;
       font-size:1rem;
+      white-space:nowrap;
     }
 
     .nav-brand span{
-      display:block;
-      font-size:.82rem;
+      font-size:.9rem;
+      color:var(--muted);
+      white-space:nowrap;
     }
 
     .nav-brand span a{
@@ -95,8 +104,29 @@
       color:var(--kg-green);
     }
 
+    .nav-brand span:not(:last-child)::after{
+      content:"|";
+      margin-left:.8rem;
+      color:#b7c0ba;
+    }
+
+    .camden-banner{
+      height:290px;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,.15),
+          rgba(255,255,255,.82)
+        ),
+        url("camden-banner-soft.webp");
+      background-size:cover;
+      background-position:center;
+      border-bottom:1px solid var(--line);
+      margin-bottom:2rem;
+    }
+
     main.container{
-      padding-top:4rem;
+      padding-top:2.5rem;
       padding-bottom:4.5rem;
     }
 
@@ -137,19 +167,6 @@
       color:var(--muted);
       max-width:680px;
       margin-bottom:1.8rem;
-    }
-
-    .hero-image{
-      margin:0 0 2rem 0;
-    }
-
-    .hero-image img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      border-radius:24px;
-      box-shadow:0 20px 45px rgba(0,0,0,.08);
-      filter:saturate(.85) contrast(1.03);
     }
 
     .actions{
@@ -367,23 +384,37 @@
       color:var(--kg-deep);
     }
 
-    @media(max-width:900px){
+    @media(max-width:1100px){
       nav.container-fluid{
-        display:flex;
         flex-direction:column;
         align-items:flex-start;
         gap:.75rem;
-      }
-
-      nav.container-fluid > ul{
-        margin:0;
-        padding-left:0;
       }
 
       nav.container-fluid > ul:last-child{
         display:flex !important;
         flex-wrap:wrap;
         gap:.5rem;
+      }
+    }
+
+    @media(max-width:900px){
+      .nav-logo{
+        width:72px;
+      }
+
+      .nav-brand{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:.25rem;
+      }
+
+      .nav-brand span:not(:last-child)::after{
+        display:none;
+      }
+
+      nav.container-fluid > ul{
+        padding-left:0;
       }
 
       nav.container-fluid > ul:last-child li{
@@ -395,21 +426,13 @@
         padding:.55rem .75rem;
       }
 
-      .nav-logo{
-        width:52px;
-      }
-
-      .nav-brand strong{
-        font-size:.95rem;
+      .camden-banner{
+        height:180px;
       }
 
       .hero,
       .feature-band{
         grid-template-columns:1fr;
-      }
-
-      .hero-image img{
-        height:220px;
       }
 
       .visual-card img{
@@ -421,7 +444,7 @@
       }
 
       main.container{
-        padding-top:2.5rem;
+        padding-top:2rem;
       }
     }
   </style>
@@ -442,11 +465,11 @@
             <strong>KGS Accountants PA Inc</strong>
 
             <span>
-              <a href="tel:8708366528">(870) 836-6528</a>
+              ☎ <a href="tel:8708366528">(870) 836-6528</a>
             </span>
 
             <span>
-              <a href="mailto:home@kgsimpson.com">home@kgsimpson.com</a>
+              ✉ <a href="mailto:home@kgsimpson.com">home@kgsimpson.com</a>
             </span>
           </div>
         </div>
@@ -470,16 +493,11 @@
     </ul>
   </nav>
 
+  <section class="camden-banner" aria-label="Downtown Camden, Arkansas"></section>
+
   <main class="container">
     <div class="grid hero">
       <section>
-        <figure class="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85"
-            alt="Modern desk with financial charts and laptop"
-          >
-        </figure>
-
         <hgroup>
           <p class="eyebrow">Camden, Arkansas</p>
           <h2>Accounting that feels clear, current, and handled.</h2>
