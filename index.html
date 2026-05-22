@@ -65,6 +65,29 @@
     footer.container{padding:2.4rem 0;text-align:center;color:var(--muted);}
     footer a{color:var(--kg-deep);}
     @media(max-width:900px){.hero,.feature-band{grid-template-columns:1fr}.visual-card img{height:380px}.stats{grid-template-columns:1fr}nav ul:last-child{display:none}.brand-logo{max-width:320px}main.container{padding-top:2.5rem}}
+    .contact-form {
+  display: grid;
+  grid-template-columns: 1fr !important;
+  gap: 1rem;
+  max-width: 720px;
+  margin-top: 1.5rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: .25rem;
+}
   </style>
 </head>
 <body>
@@ -143,7 +166,7 @@
           <h2>Start with a consultation.</h2>
           <h3>Send your information and KGS Accountants PA Inc will follow up about tax, bookkeeping, or payroll services.</h3>
         </hgroup>
-<form class="grid"
+<form class="contact-form"
       action="https://formspree.io/f/mjgzwqle"
       method="POST">
 
