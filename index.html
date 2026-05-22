@@ -1,0 +1,159 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KGS Accountants PA Inc | Camden, AR Tax, Bookkeeping & Payroll</title>
+  <meta name="description" content="Modern accounting, tax preparation, monthly bookkeeping, and payroll services from KGS Accountants PA Inc in Camden, Arkansas.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    :root{
+      --primary:#0a5a2b;
+      --primary-hover:#083f20;
+      --primary-focus:rgba(10,90,43,.16);
+      --primary-inverse:#ffffff;
+      --kg-green:#0a5a2b;
+      --kg-deep:#063418;
+      --ink:#142018;
+      --muted:#68766d;
+      --line:#e6ebe7;
+      --paper:#fbfcfb;
+      --soft:#f3f7f4;
+      --gold:#bfa35a;
+    }
+    html{scroll-behavior:smooth;}
+    body{background:linear-gradient(180deg,#ffffff 0%,#f8faf8 58%,#eef4f0 100%);color:var(--ink);}
+    nav.container-fluid{padding:1rem 4vw;border-bottom:1px solid var(--line);background:rgba(255,255,255,.86);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10;}
+    nav strong{color:var(--kg-deep);letter-spacing:.02em;font-weight:700;}
+    nav a{color:#233327;text-decoration:none;}
+    nav a[role="button"]{background:var(--kg-green);border-color:var(--kg-green);box-shadow:0 10px 26px rgba(10,90,43,.16);}
+    main.container{padding-top:4rem;padding-bottom:4.5rem;}
+    .brand-logo{max-width:390px;width:100%;height:auto;display:block;margin-bottom:2.4rem;filter:drop-shadow(0 18px 28px rgba(6,52,24,.08));}
+    .hero{align-items:center;gap:4.5rem;}
+    .eyebrow{color:var(--kg-green);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.18em;margin-bottom:.6rem;}
+    h1,h2,h3{color:var(--kg-deep);letter-spacing:-.035em;}
+    h2{font-size:clamp(2.1rem,5vw,4.35rem);line-height:.96;margin-bottom:1rem;}
+    h3{font-weight:500;color:#506057;letter-spacing:-.015em;}
+    .lead{font-size:1.15rem;line-height:1.8;color:var(--muted);max-width:680px;margin-bottom:1.8rem;}
+    .actions{display:flex;gap:.85rem;flex-wrap:wrap;margin:1.8rem 0 2.4rem;}
+    .secondary-btn{border:1px solid var(--line);background:#fff;color:var(--kg-deep);box-shadow:0 10px 24px rgba(20,32,24,.05);}
+    .visual-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:.8rem;box-shadow:0 28px 70px rgba(16,34,20,.1);position:relative;overflow:hidden;}
+    .visual-card:before{content:"";position:absolute;inset:auto -30% -35% auto;width:70%;height:70%;background:radial-gradient(circle,rgba(10,90,43,.14),transparent 65%);pointer-events:none;}
+    .visual-card img{border-radius:23px;width:100%;height:520px;object-fit:cover;filter:saturate(.85) contrast(1.03);}
+    .caption{font-size:.78rem;color:#7b877f;margin:.7rem .6rem .2rem;}
+    .caption a{color:#66736b;}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem;}
+    .stat{border:1px solid var(--line);background:rgba(255,255,255,.78);border-radius:18px;padding:1rem;}
+    .stat strong{display:block;color:var(--kg-green);font-size:1.45rem;line-height:1;}
+    .stat span{font-size:.86rem;color:var(--muted);}
+    .services{margin-top:5rem;}
+    .section-kicker{color:var(--kg-green);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;}
+    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.4rem;}
+    .service-grid article{margin:0;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:24px;padding:1.35rem;box-shadow:0 18px 42px rgba(23,42,28,.055);}
+    .service-grid article:before{content:"";display:block;width:34px;height:3px;background:linear-gradient(90deg,var(--kg-green),var(--gold));border-radius:99px;margin-bottom:1rem;}
+    .service-grid h3{font-size:1.12rem;color:var(--kg-deep);font-weight:700;}
+    .service-grid p{color:var(--muted);font-size:.98rem;}
+    .feature-band{margin-top:4rem;background:linear-gradient(135deg,#ffffff,#f2f7f3);border:1px solid var(--line);border-radius:30px;padding:2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;box-shadow:0 24px 60px rgba(20,32,24,.07);}
+    .feature-band img{border-radius:22px;width:100%;height:330px;object-fit:cover;filter:saturate(.82);}
+    .feature-band ul{padding-left:1.1rem;color:var(--muted);}
+    [aria-label="Subscribe example"]{padding:4.5rem 0;background:linear-gradient(135deg,#062d16,#0a5a2b);}
+    [aria-label="Subscribe example"] article{border:0;border-radius:28px;background:#fff;box-shadow:0 28px 70px rgba(0,0,0,.22);}
+    [aria-label="Subscribe example"] h2{font-size:clamp(1.8rem,3.5vw,2.7rem);}
+    input{background:#fbfdfb!important;border-color:#dde7df!important;}
+    button{background:var(--kg-green);border-color:var(--kg-green);}
+    footer.container{padding:2.4rem 0;text-align:center;color:var(--muted);}
+    footer a{color:var(--kg-deep);}
+    @media(max-width:900px){.hero,.feature-band{grid-template-columns:1fr}.visual-card img{height:380px}.stats{grid-template-columns:1fr}nav ul:last-child{display:none}.brand-logo{max-width:320px}main.container{padding-top:2.5rem}}
+  </style>
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul><li><strong>KGS Accountants PA Inc</strong></li></ul>
+    <ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact" role="button">Request Consultation</a></li></ul>
+  </nav>
+
+  <main class="container">
+    <div class="grid hero">
+      <section>
+        <img class="brand-logo" src="/mnt/data/ChatGPT Image May 21, 2026, 10_23_15 PM.png" alt="KGS Accountants PA Inc logo">
+        <hgroup>
+          <p class="eyebrow">Camden, Arkansas</p>
+          <h2>Accounting that feels clear, current, and handled.</h2>
+          <h3>Tax preparation, monthly bookkeeping, and payroll filing support for individuals, businesses, non-profits, estates, and trusts.</h3>
+        </hgroup>
+        <p class="lead">KGS Accountants PA Inc helps clients keep the important financial work organized, accurate, and on schedule, from annual tax returns to ongoing books and payroll compliance.</p>
+        <div class="actions">
+          <a href="#contact" role="button">Request a Consultation</a>
+          <a href="#services" role="button" class="secondary-btn">Explore Services</a>
+        </div>
+        <div class="stats" aria-label="KGS service highlights">
+          <div class="stat"><strong>Tax</strong><span>Individual, corporate, non-profit, estate & trust returns</span></div>
+          <div class="stat"><strong>Books</strong><span>Monthly bookkeeping for cleaner records</span></div>
+          <div class="stat"><strong>Payroll</strong><span>Quarterly and yearly filing support</span></div>
+        </div>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85" alt="Modern desk with financial charts and laptop" />
+          <figcaption><a href="https://unsplash.com/photos/person-writing-on-white-paper-HJckKnwCXxQ" target="_blank">Photo via Unsplash</a></figcaption>
+        </figure>
+        <h3 id="services">Tax preparation for complex and everyday filings</h3>
+        <p>We prepare individual, corporate, non-profit, estate, and trust income tax returns with careful attention to deadlines, documentation, and practical next steps.</p>
+        <h3>Bookkeeping and payroll that stay on rhythm</h3>
+        <p>Monthly bookkeeping and payroll services help keep records current, employees paid, and quarterly and annual filings moving on time.</p>
+      </section>
+
+      <section class="visual-card" aria-label="Professional accounting imagery">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=85" alt="Professional reviewing accounting paperwork with calculator">
+        <p class="caption"><a href="https://unsplash.com/photos/person-using-calculator-while-writing-on-paper-4T-02pK0jUg" target="_blank">Photo via Unsplash</a></p>
+      </section>
+    </div>
+
+    <section class="services" aria-label="Accounting services">
+      <p class="section-kicker">Services</p>
+      <h2>Built for tax season and everything between.</h2>
+      <div class="service-grid">
+        <article><h3>Individual Returns</h3><p>Personal income tax preparation with organized intake and straightforward communication.</p></article>
+        <article><h3>Corporate Returns</h3><p>Business tax preparation for corporations that need clean, timely filing support.</p></article>
+        <article><h3>Non-Profit Returns</h3><p>Tax return preparation for non-profit organizations with careful compliance focus.</p></article>
+        <article><h3>Estate & Trust Returns</h3><p>Fiduciary income tax return preparation for estate and trust reporting needs.</p></article>
+        <article><h3>Monthly Bookkeeping</h3><p>Consistent bookkeeping to help owners and organizations understand where they stand.</p></article>
+        <article><h3>Payroll Services</h3><p>Payroll support including quarterly and yearly payroll filing services.</p></article>
+      </div>
+    </section>
+
+    <section id="about" class="feature-band" aria-label="About KGS Accountants PA Inc">
+      <div>
+        <p class="section-kicker">Local support</p>
+        <h2>Based in Camden. Focused on clarity.</h2>
+        <p>KGS Accountants PA Inc serves clients who want dependable accounting support without confusion or clutter.</p>
+        <ul>
+          <li>Year-round service beyond tax season</li>
+          <li>Clean, modern communication and organized records</li>
+          <li>Support for individuals, businesses, non-profits, estates, and trusts</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1200&q=85" alt="Calculator and financial planning paperwork on a clean desk">
+    </section>
+  </main>
+
+  <section aria-label="Subscribe example" id="contact">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Start with a consultation.</h2>
+          <h3>Send your information and KGS Accountants PA Inc will follow up about tax, bookkeeping, or payroll services.</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required />
+          <input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required />
+          <button type="submit" onclick="event.preventDefault()">Contact KGS</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <footer class="container">
+    <small><a href="#services">Services</a> • <a href="#contact">Contact</a></small>
+  </footer>
+</body>
+</html>
