@@ -143,11 +143,50 @@
           <h2>Start with a consultation.</h2>
           <h3>Send your information and KGS Accountants PA Inc will follow up about tax, bookkeeping, or payroll services.</h3>
         </hgroup>
-        <form class="grid">
-          <input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required />
-          <input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required />
-          <button type="submit" onclick="event.preventDefault()">Contact KGS</button>
-        </form>
+<form class="grid"
+      action="https://formspree.io/f/mjgzwqle"
+      method="POST">
+
+  <input type="hidden"
+         name="_subject"
+         value="New KGS Website Contact">
+
+  <input type="text"
+         name="name"
+         placeholder="Full name"
+         aria-label="Full name"
+         required />
+
+  <input type="tel"
+         name="phone"
+         placeholder="Phone number"
+         aria-label="Phone number"
+         required />
+
+  <input type="email"
+         name="email"
+         placeholder="Email address (optional)"
+         aria-label="Email address" />
+
+  <select name="service" aria-label="Service requested">
+    <option value="">Select service</option>
+    <option value="Individual Tax Return">Individual Tax Return</option>
+    <option value="Corporate Tax Return">Corporate Tax Return</option>
+    <option value="Bookkeeping">Monthly Bookkeeping</option>
+    <option value="Payroll">Payroll Services</option>
+    <option value="Estate & Trust">Estate & Trust</option>
+    <option value="General Consultation">General Consultation</option>
+  </select>
+
+  <textarea name="message"
+            placeholder="Briefly describe how we can help"
+            aria-label="Message"></textarea>
+
+  <button type="submit">
+    Contact KGS
+  </button>
+
+</form>
       </article>
     </div>
   </section>
