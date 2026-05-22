@@ -442,63 +442,92 @@ nav.container-fluid > ul:last-child a[role="button"]{
       }
     }
 
-    @media(max-width:900px){
-      .nav-logo{
-        width:90px;
-      }
+@media(max-width:900px){
 
-      .nav-logo-wrap{
-        gap:.85rem;
-      }
-
-      .nav-brand strong{
-        font-size:1rem;
-      }
-
-      .nav-contact-row{
-        flex-wrap:wrap;
-        gap:.4rem .65rem;
-        font-size:.86rem;
-      }
-
-      .nav-divider{
-        display:none;
-      }
-
-      nav.container-fluid{
-        padding:.35rem 1rem !important;
-      }
-
-      nav.container-fluid > ul:last-child li{
-        margin:0 !important;
-      }
-
-      nav.container-fluid > ul:last-child a{
-        font-size:.9rem;
-        padding:.55rem .75rem;
-      }
-
-      .camden-banner{
-        height:180px;
-      }
-
-      .hero,
-      .feature-band{
-        grid-template-columns:1fr;
-      }
-
-      .visual-card img{
-        height:380px;
-      }
-
-      .stats{
-        grid-template-columns:1fr;
-      }
-
-      main.container{
-        padding-top:2rem;
-      }
+    nav.container-fluid{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        padding:.5rem .75rem !important;
+        gap:.75rem !important;
     }
+
+    .nav-logo-wrap{
+        width:100%;
+        justify-content:center;
+        gap:.6rem;
+    }
+
+    .nav-logo{
+        width:75px !important;
+        transform:none !important;
+    }
+
+    .nav-brand{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:.15rem;
+    }
+
+    .nav-brand strong{
+        font-size:1rem;
+        white-space:normal;
+    }
+
+    .nav-contact-row{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:.15rem;
+        font-size:.85rem;
+    }
+
+    .nav-divider{
+        display:none;
+    }
+
+    nav.container-fluid > ul:last-child{
+        display:flex !important;
+        flex-wrap:wrap !important;
+        justify-content:center !important;
+        gap:.6rem !important;
+        width:100%;
+    }
+
+    nav.container-fluid > ul:last-child li{
+        margin:0 !important;
+    }
+
+    nav.container-fluid > ul:last-child a{
+        font-size:.9rem !important;
+    }
+
+    nav.container-fluid > ul:last-child a[role="button"]{
+        padding:.65rem .85rem !important;
+    }
+
+    .camden-banner{
+        height:180px;
+    }
+
+    .hero,
+    .feature-band{
+        grid-template-columns:1fr;
+    }
+
+    .visual-card img{
+        height:380px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    main.container{
+        padding-top:.5rem;
+    }
+}
   </style>
 </head>
 
