@@ -29,7 +29,7 @@
     nav a{color:#233327;text-decoration:none;}
     nav a[role="button"]{background:var(--kg-green);border-color:var(--kg-green);box-shadow:0 10px 26px rgba(10,90,43,.16);}
     main.container{padding-top:4rem;padding-bottom:4.5rem;}
-    .brand-logo{max-width:690px;width:100%;height:auto;display:block;margin-bottom:2.4rem;filter:drop-shadow(0 18px 28px rgba(6,52,24,.08));}
+    .brand-logo{max-width:900px;width:100%;height:auto;display:block;margin-left: -120px;margin-bottom:-2rem;filter:drop-shadow(0 18px 28px rgba(6,52,24,.08));}
     .hero{align-items:center;gap:4.5rem;}
     .eyebrow{color:var(--kg-green);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.18em;margin-bottom:.6rem;}
     h1,h2,h3{color:var(--kg-deep);letter-spacing:-.035em;}
@@ -94,11 +94,48 @@
 .contact-form button {
   width: 100%; /* was margin-top .25rem; */
 }
+    .nav-brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.25;
+}
+
+.nav-brand strong{
+  margin-bottom:.15rem;
+}
+
+.nav-brand span{
+  font-size:.82rem;
+}
+
+.nav-brand span a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.nav-brand span a:hover{
+  color:var(--kg-green);
+}
   </style>
 </head>
 <body>
   <nav class="container-fluid">
-    <ul><li><strong>KGS Accountants PA Inc</strong></li></ul>
+    <ul>
+      <li>
+        <div class="nav-brand">
+        <strong>KGS Accountants PA Inc</strong>
+
+          <span>
+            <a href="tel:8708366528">(870) 836-6528</a>
+          </span>
+
+          <span>
+            <a href="mailto:home@kgsimpson.com">home@kgsimpson.com
+            </a>
+          </span>
+        </div>
+      </li>
+    </ul>
     <ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact" role="button">Request Consultation</a></li></ul>
   </nav>
 
